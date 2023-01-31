@@ -1,4 +1,3 @@
-const lib=require('../lib.js');
 const Manager = require('../library/Manager')
 
 const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
