@@ -1,31 +1,36 @@
 const Intern = require('../library/Intern')
 
-const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
-
-test('Verifying employee is generated as an object.', () => {
-    expect(testE).toBeInstanceOf(Engineer)
+test('Verifying intern is generated as an object.', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE).toBeInstanceOf(Intern)
 })
 
-test('Verifying employee name...', () => {
-    expect(testE.getName()).tobe(name);
+test('Verifying intern name...', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE.getName()).toBe('Manong');
 })
 
-test('Verifying employee ID...', () => {
-    expect(testE.getId()).tobe(id);
+test('Verifying intern ID...', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE.getId()).toBe(1);
 })
 
-test('Verifying employee email...', () => {
-    expect(testE.getEmail()).tobe(email);
+test('Verifying intern email...', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE.getEmail()).toBe('manong@gmail.com');
 })
 
-test('Verifying employee school...', () => {
-    expect(testE.getSchool()).tobe(school);
+test('Verifying intern school...', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE.getSchool()).toBe('UC Davis');
 })
 
-test('Verifying employee pronouns...', () => {
-    expect(testE.getPronouns()).tobe(pronouns);
+test('Verifying intern pronouns...', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE.getPronouns()).toBe('they/he');
 })
 
-test('Verifying employee role...', () => {
-    expect(testE.getRole).tobe('Intern');
+test('Verifying intern role...', () => {
+    const testE = new Intern ('Manong', 1, 'manong@gmail.com', 'UC Davis','they/he')
+    expect(testE.getRole()).toBe('Intern');
 })

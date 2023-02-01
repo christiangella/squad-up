@@ -1,27 +1,32 @@
 const Employee = require('../library/Employee.js')
 
-const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
 
 test('Verifying employee is generated as an object.', () => {
+    const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
     expect(testE).toBeInstanceOf(Employee)
 })
 
 test('Verifying employee name...', () => {
-    expect(testE.getName()).tobe(name);
+    const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
+    expect(testE.getName()).toEqual('Manong');
 })
 
 test('Verifying employee ID...', () => {
-    expect(testE.getId()).tobe(id);
+    const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
+    expect(testE.getId()).toBe(1);
 })
 
 test('Verifying employee email...', () => {
-    expect(testE.getEmail()).tobe(email);
+    const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
+    expect(testE.getEmail()).toBe('manong@gmail.com');
 })
 
 test('Verifying employee pronouns...', () => {
-    expect(testE.getPronouns()).tobe(pronouns);
+    const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
+    expect(testE.getPronouns()).toBe('they/he');
 })
 
 test('Verifying employee role...', () => {
-    expect(testE.getRole).tobe('Employee');
+    const testE = new Employee ('Manong', 1, 'manong@gmail.com', 'they/he')
+    expect(testE.getRole()).toBe('Employee');
 })

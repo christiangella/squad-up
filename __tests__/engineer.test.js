@@ -1,31 +1,36 @@
 const Engineer = require('../library/Engineer')
 
-const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
-
-test('Verifying employee is generated as an object.', () => {
+test('Verifying engineer is generated as an object.', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
     expect(testE).toBeInstanceOf(Engineer)
 })
 
-test('Verifying employee name...', () => {
-    expect(testE.getName()).tobe(name);
+test('Verifying engineer name...', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
+    expect(testE.getName()).toBe("Manong");
 })
 
-test('Verifying employee ID...', () => {
-    expect(testE.getId()).tobe(id);
+test('Verifying engineer ID...', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
+    expect(testE.getId()).toBe(1);
 })
 
-test('Verifying employee email...', () => {
-    expect(testE.getEmail()).tobe(email);
+test('Verifying engineer email...', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
+    expect(testE.getEmail()).toBe('manong@gmail.com');
 })
 
-test('Verifying employee Github...', () => {
-    expect(testE.getGithub()).tobe(github);
+test('Verifying engineer Github...', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
+    expect(testE.getGithub()).toBe("manongchris");
 })
 
-test('Verifying employee pronouns...', () => {
-    expect(testE.getPronouns()).tobe(pronouns);
+test('Verifying engineer pronouns...', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'manongchris','they/he')
+    expect(testE.getPronouns()).toBe('they/he');
 })
 
-test('Verifying employee role...', () => {
-    expect(testE.getRole).tobe('Engineer');
+test('Verifying engineer role...', () => {
+    const testE = new Engineer ('Manong', 1, 'manong@gmail.com', 'they/he')
+    expect(testE.getRole()).toBe('Engineer');
 })

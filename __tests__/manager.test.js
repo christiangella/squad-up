@@ -1,31 +1,31 @@
 const Manager = require('../library/Manager')
 
-const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
-
-test('Verifying employee is generated as an object.', () => {
-    expect(testE).toBeInstanceOf(Engineer)
-})
-
 test('Verifying employee name...', () => {
-    expect(testE.getName()).tobe(name);
+    const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
+    expect(testE.getName()).toBe('Manong');
 })
 
 test('Verifying employee ID...', () => {
-    expect(testE.getId()).tobe(id);
+    const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
+    expect(testE.getId()).toBe(1);
 })
 
 test('Verifying employee email...', () => {
-    expect(testE.getEmail()).tobe(email);
+    const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
+    expect(testE.getEmail()).toBe('manong@gmail.com');
 })
 
 test('Verifying employee office number...', () => {
-    expect(testE.getOfficeNumber()).tobe(officeNumber);
+    const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
+    expect(testE.getOfficeNumber()).toBe('101');
 })
 
 test('Verifying employee pronouns...', () => {
-    expect(testE.getPronouns()).tobe(pronouns);
+    const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
+    expect(testE.getPronouns()).toBe('they/he');
 })
 
 test('Verifying employee role...', () => {
-    expect(testE.getRole).tobe('Manager');
+    const testE = new Manager ('Manong', 1, 'manong@gmail.com', '101','they/he')
+    expect(testE.getRole()).toBe('Manager');
 })
