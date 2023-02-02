@@ -1,0 +1,30 @@
+<!-- ENGINEER CARD -->
+<div class="col-5 mt-3">
+    <div class="card">
+        <div class="card-header">
+            <h2>${engineer.name} (${engineer.pronons})</h4>
+            <h3>🪴 Engineer</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped ">
+                <tbody>
+                  <tr>
+                    <td scope="row">
+                        <strong>🌱 Employee ID</strong>: ${engineer.id}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                        <strong>🌿 Email</strong>: <a href="mailto:${engineer.email}">${engineer.email}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                        <strong>🌻 GitHub</strong>: <a href="https://github.com/${engineer.github}">${engineer.github}</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
