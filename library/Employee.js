@@ -5,6 +5,7 @@ class Employee {
         this.email = email;
         this.pronouns = pronouns;
     }
+    // establishes function for each data item
     getName() {
         return this.name;
     }

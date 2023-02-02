@@ -1,11 +1,18 @@
 const fs = require('fs')
 
+// function to generate html page
+// data is passed in from index.js
 const generateSquad = (data) => {
+    // establishing blank array to hold card data
     const sumCards = [];
+    // running through the loop
     for (let i=0; i < data.length; i++) {
+        // referencing the dataset through i
         const currEmployee = data[i];
+        // matches role to specific card
         const currRole = currEmployee.getRole();
             if (currRole === 'Manager') {
+                // when a match is found, pulls data
                 sumCards.push(`
                 <!-- MANAGER CARD -->
                 <div class="col-5 mt-3">
@@ -108,6 +115,7 @@ const generateSquad = (data) => {
             `)
         }
     }
+    // cards are then put into html document
     return `<!DOCTYPE html>
     <html lang="en">
     <head>

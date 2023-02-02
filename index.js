@@ -12,8 +12,10 @@ const Intern = require('./library/Intern')
 
 const generateSquad = require('./source/generateSquad.js')
 
+// blank team array as placeholder to store data
 const teamArray = [];
 
+// starts prompt by asking for manager information
 const initM = [
 {
     type: 'input',
@@ -40,6 +42,8 @@ const initM = [
     name: 'officeManager',
     message: "What is the office number of the team manager?"
 }]
+
+// questions for engineer role
 const initE = [
 {
     type: 'input',
@@ -66,6 +70,8 @@ const initE = [
     name: 'githubEngineer',
     message: "What is the GitHub of the Engineer?"
 }]
+
+// questions for intern role
 const initI = [
 {
     type: 'input',
@@ -93,6 +99,7 @@ const initI = [
     message: "What is the school of the Intern?"
 }]
 
+// prompt to add team members
 const initT = [
 {
     type: 'list',
@@ -102,15 +109,11 @@ const initT = [
 }
 ]
 
-// psuedocode
-// -- prompt manager to complete
-// then ask if there are employees
-// if yes, then add employees by prompt
-
+// function to create manager and start process
+// creates instance of manager through model, pushes it to teamarray, and then initiates function for adding team members
 function createManager () {
     inquirer
     .prompt(
-      /* Pass your questions in here */
       initM
     )
     .then((answers) => {
@@ -120,6 +123,8 @@ function createManager () {
       createSquad()
     })
 }
+
+// creates instance of engineer through model, pushes it to teamarray, and then initiates function for adding team members
 function createEngineer () {
     inquirer
     .prompt(
@@ -133,6 +138,8 @@ function createEngineer () {
       createSquad()
     })
 }
+
+// creates instance of intern through model, pushes it to teamarray, and then initiates function for adding team members
 function createIntern () {
     inquirer
     .prompt(
@@ -146,15 +153,17 @@ function createIntern () {
       createSquad()
     })
 }
+
+// sends data to generatesquad.js and where the resulting output file is put
 function createTeam () {
     fs.writeFile(path.join(path.resolve(__dirname, "dist"),"index.html"),generateSquad(teamArray),(err)=>{
     })
 }
 
+// overall flow
 function createSquad () {
     inquirer
     .prompt(
-      /* Pass your questions in here */
       initT
     )
     .then((answers) => {
@@ -173,6 +182,7 @@ function createSquad () {
     })
 }
 
+// startup application for aesthetics
 const initApplication = async() => {
     console.log(`\n\n✧ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n       welcome to SQUAD UP.\n       let's get your squad\n       generated . . .\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ * .\n`)
     createManager()

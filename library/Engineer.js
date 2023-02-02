@@ -5,6 +5,8 @@ class Engineer extends Employee {
         super(name, id, email, pronouns);
         this.github = github
     }
+    // establishes function for each data item
+    // other items are defined in the employee model
     getGithub() {
         return this.github;
     }

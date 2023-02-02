@@ -5,6 +5,8 @@ class Intern extends Employee {
         super(name, id, email, pronouns);
         this.school = school
     }
+    // establishes function for each data item
+    // other items are defined in the employee model
     getSchool() {
         return this.school;
     }
