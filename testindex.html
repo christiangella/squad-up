@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>...meet the team</title>
+</head>
+<body>
+    <div class="jumbotron ">
+        <div class="ml-4 mr-4">
+        <h1 class="display-4">meet the squad</h1>
+        <hr class="my-3">
+        <p class="lead">let's meet the engineering team behind the product</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-center" id="team-cards">
+                
+                <div class="col-5 mt-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>${employee.name}</h4>
+                            <h3>🪴 Manager</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped ">
+                                <tbody>
+                                  <tr>
+                                    <td scope="row">
+                                        <strong>🌱 Employee ID</strong>: ${manager.id}
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row">
+                                        <strong>🌿 Email</strong>: <a href="mailto:${employee.email}">${manager.email}</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row">
+                                        <strong>🌻 Office</strong>: ${manager.officeNumber}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+        </div>
+    </main>
+</body>
+</html>
