@@ -1,0 +1,30 @@
+<!-- MANAGER CARD -->
+<div class="col-5 mt-3">
+    <div class="card">
+        <div class="card-header">
+            <h2>${intern.name} (${intern.pronons})</h4>
+            <h3>🪴 Intern</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped ">
+                <tbody>
+                  <tr>
+                    <td scope="row">
+                        <strong>🌱 Employee ID</strong>: ${intern.id}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                        <strong>🌿 Email</strong>: <a href="mailto:${intern.email}">${intern.email}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">
+                        <strong>🌻 School</strong>: ${intern.school}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
