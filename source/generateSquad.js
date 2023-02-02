@@ -1,7 +1,6 @@
 const fs = require('fs')
 
 const generateSquad = (data) => {
-    console.log(data)
     const sumCards = [];
     for (let i=0; i < data.length; i++) {
         const currEmployee = data[i];
@@ -16,7 +15,7 @@ const generateSquad = (data) => {
                             <h3>🪴 Manager</h3>
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped ">
+                            <table class="table table-striped">
                                 <tbody>
                                   <tr>
                                     <td scope="row">
@@ -108,7 +107,7 @@ const generateSquad = (data) => {
             </div>
             `)
         }
-    console.log(sumCards)
+    }
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -142,7 +141,6 @@ const generateSquad = (data) => {
         </main>
     </body>
     </html>`
-}
 }
 
 module.exports = generateSquad
